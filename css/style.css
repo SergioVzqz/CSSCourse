@@ -422,3 +422,22 @@ a{
   }
   
 }
+
+/* Testimonial */
+.testimonial{
+  padding: 3rem;
+}
+
+.testimonial__image{
+  width: 100%;
+}
+
+@media screen and (min-width:768px) {
+  .testimonial .quote,
+  .testimonial .quote__author{
+    font-size: 2.4rem;
+  }
+  .testimonial .quote{
+    margin-left: 6rem;
+  }
+}
