@@ -28,6 +28,7 @@ body {
 h1,h2,h3{
   color: var(--color-headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -182,6 +183,7 @@ a{
 
 .btn {
   padding: 2rem 5rem;
+  outline: 0;
   margin: 1rem 0;
   border-radius: 50px;
   border: 0;
@@ -191,6 +193,13 @@ a{
   display: inline-block;
   cursor: pointer;
   text-align: center;
+}
+
+.btn .icon{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn--block{
@@ -253,7 +262,7 @@ a{
 .input-group .input{
   border: none;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn{
@@ -617,5 +626,83 @@ a{
 
   .nav__item {
     border: 0;
+  }
+}
+
+/* Hero */
+.hero{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+
+}
+
+.hero__tagline{
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+.hero__image{
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
+}
+
+/* Feature */
+
+/* Features */
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
+
+/* Block domain */
+
+.block-domain{
+  margin: 4rem auto;
+  max-width: 670px;
+}
+.block-domain .input-group{
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  
+}
+
+.block-domain__prices{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+}
+
+@media screen and (min-width:768px){
+  .block-domain__prices{
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr))
   }
 }
