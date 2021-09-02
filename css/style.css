@@ -559,3 +559,63 @@ a{
   max-width: 1140px;
   margin: 0 auto;
 }
+
+/* Nav bar*/
+.nav{
+  background: #000;
+  display: flex;
+  align-items:  center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.nav__list{
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item{
+  padding: 1rem 2rem;
+}
+
+.nav__item>a{
+  color: #d2d0db;
+  transition: all .3s;
+}
+
+.nav__item>a:hover{
+  color: #fff;
+}
+
+.nav__toggler{
+  opacity: .5;
+  cursor: pointer;
+  transition: opacity .25s;
+}
+
+.nav__toggler:hover{
+  opacity: 1;
+}
+
+.nav__logo{
+  width:100px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border: 0;
+  }
+}
