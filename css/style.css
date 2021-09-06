@@ -21,6 +21,7 @@
 
 html{
   font-size:62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -193,7 +194,7 @@ a{
 /* Buttons */
 
 .btn {
-  padding: 2rem 5rem;
+  padding: 2rem 3rem;
   outline: 0;
   margin: 1rem 0;
   border-radius: 50px;
@@ -204,6 +205,7 @@ a{
   display: inline-block;
   cursor: pointer;
   text-align: center;
+  white-space: nowrap;
 }
 
 .btn .icon{
@@ -251,37 +253,38 @@ a{
 
 /* Inputs */
 
-.input{
-  border: 1px solid var(--color-border);
+.input {
   border-radius: var(--border-radius);
-  padding: 1.5rem 3.5rem;
-  outline: none;
+  border: 1px solid var(--color-border);
   color: var(--color-headings);
   font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
 }
 
-::placeholder{
-  color: #cdcbc7;
+::placeholder {
+  color: #cdcbd7;
 }
 
-.input-group{
+.input-group {
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   display: flex;
 }
 
-.input-group .input{
-  border: none;
+.input-group .input {
+  border: 0;
   flex-grow: 1;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1rem;
+  width: 0;
 }
 
-.input-group .btn{
-  margin: 3px;
+.input-group .btn {
+  margin: 4px;
 }
 
-@media screen and (min-width: 1024px){
-  .input{
+@media screen and (min-width: 1024px) {
+  .input {
     font-size: 1.5rem;
   }
 }
@@ -501,6 +504,10 @@ a{
   border-radius: 5px;
 }
 
+.callout-signup{
+  transform: translateY(5rem);
+}
+
 .callout--primary{
   background: var(--color-primary);
   color: white;
@@ -696,20 +703,24 @@ a{
 
 /* Block domain */
 
-.block-domain{
-  margin: 4rem auto;
-  max-width: 670px;
-}
+
 .block-domain .input-group{
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
+   margin: 4rem auto;
+  max-width: 670px;
   
 }
 
 .block-domain__prices{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width:768px){
@@ -768,4 +779,83 @@ a{
   .block-showcase .grid{
     grid-template-columns: 50% 50%; 
   }
+}
+
+/* Footer */
+.footer{
+  background: #232323;
+
+}
+
+.footer .list{
+  margin: 0;
+}
+
+.footer a{
+  color: #777;
+  transition: color .3s;
+}
+
+.footer a:hover{
+  color: white;
+}
+
+.footer__section{
+  padding: 2rem;
+}
+
+.footer__heading{
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__brand{
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer__brand img{
+  width: 100%;
+  max-width: 200px;
+}
+
+.footer__copyright{
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: .5;
+}
+
+@media screen and (min-width:768px){
+  .footer{
+      font-size: 1.5rem;
+      padding-top: 10rem;
+  }
+  .footer__sections{
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  
+  .footer .collapsible__chevron{
+    display: none;
+  }
+
+  .footer .collapsible__content{
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .footer__brand{
+    order: -1;
+    margin-top: 1rem;
+  }
+
+  .footer__copyright{
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: .5;
+  }
+
+  .footer__heading{
+    font-size: 1.6rem;
+  }
+
 }
