@@ -1,0 +1,51 @@
+
+    <div>
+      <canvas id="graficaResultados"></canvas>
+    </div>
+
+	<script src="/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <script>
+   
+  const data = {
+  labels: [
+    'Responsabilidad, formación y capacitación',
+    'Tolerancia y respeto',
+    'Comunicación',
+    'Trabajo en equipo',
+    'Calidad'
+  ],
+  datasets: [{
+    label: 'Resultados',
+    data: [65, 59, 90, 81, 56],
+    fill: true,
+    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+    borderColor: 'rgb(255, 99, 132)',
+    pointBackgroundColor: 'rgb(255, 99, 132)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(255, 99, 132)'
+  }]
+};
+
+  const options ={
+    scale: {
+        r:{
+            min: 0,
+            max: 100,
+        }     
+      }
+  }
+
+  const config = {
+    type: 'radar',
+    data: data,
+    options: options
+  };
+
+  var myChart = new Chart(
+    document.getElementById('graficaResultados'),
+    config
+  );
+ </script>
+ 
