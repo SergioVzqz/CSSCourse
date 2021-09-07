@@ -2,7 +2,7 @@
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
   --color-accent: #ff3400;
-  --color-headings: #1b0760;
+  --color-headings: #4720d4;
   --color-body: #918ca4;
   --color-body-darker: #5c5577;
   --color-border: #ccc;
@@ -867,11 +867,7 @@ a{
 
 /* Questions */
 
-.slider{
-  width: 100%;
-  cursor: pointer;
-  
-}
+
 
 .query{
   margin-bottom: 5rem;
@@ -882,6 +878,10 @@ a{
 
 .block-questions .grid{
   gap: 2rem 2rem;
+}
+
+.container--chart{
+  max-width: 50vh;
 }
 
 
@@ -932,7 +932,3 @@ a{
   margin-bottom: 4rem;
 }
 
-
-@media screen and (min-width: 786px) {
-   
-}

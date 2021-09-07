@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+  <meta name="description">
+	<title>Topico 2</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="/css/normalize.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="">
+
+  
+    <nav class="nav collapsible">
+		<a href="/"><img src="images/logo.svg" alt="" class="nav__logo"></a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="images/sprite.svg#menu"></use>
+      </svg>
+    <ul class="list nav__list collapsible__content">
+      <li class="nav__item"><a href="">Inicio</a></li>
+      <li class="nav__item"><a href="">Dinámica</a></li>
+      <li class="nav__item"><a href="">Cuestionario</a></li>
+      <li class="nav__item"><a href="">Autor</a></li>
+    </ul>
+  </nav>
+
+    <section class="block container block-questions" id="cuestionario">
+      
+    </section>
+    <div class="container questions__button">
+      <button class="btn btn-primary btn--accent btn--resultados" id="mostrarResultados">Mostrar Resultado</button>
+    </div>
+    <div class="container container--chart">
+      <canvas id="graficaResultados"></canvas>
+    </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-  <meta name="description">
+	<meta name="description">
 	<title>Topico 2</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +15,126 @@
 
 <body>
 
-   <section class="block container block-questions" id="cuestionario">
-      
-    </section>
-    <div class="container questions__button">
-      <button class="btn btn-primary btn--accent btn--resultados" id="mostrarResultados">Mostrar Resultado</button>
-      
+
+	<nav class="nav collapsible">
+		<a href="/"><img src="images/logo.svg" alt="" class="nav__logo"></a>
+        <svg class="icon icon--white nav__toggler">
+          <use xlink:href="images/sprite.svg#menu"></use>
+        </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="index.html">Inicio</a></li>
+        <li class="nav__item"><a href="dinamica.html">Dinámica</a></li>
+        <li class="nav__item"><a href="cuestionario.html">Cuestionario</a></li>
+        <li class="nav__item"><a href="autor.html">Autor</a></li>
+      </ul>
+      </nav>
+
+    <section class="block block--dark block--skewed-left hero">
+    <div class="container grid grid--1x2">
+      <header class="block__header hero__content">
+        <h1 class="block__heading">Ambiente laboral</h1>
+        <p class="hero__tagline">Antes de ser profesionistas somos humanos.</p>
+        <a href="#ambiente-laboral" class="btn btn--accent btn--stretched">Iniciemos</a>
+      </header>
+      <img class="hero__image" src="images/banner.png" alt="">
     </div>
-    <canvas id="graficaResultados"></canvas>
+  </section>
+
+
+    
+<section class="block container" id="ambiente-laboral">
+  <header class="block__header">
+    <h2>Ambiente laboral</h2>
+    <p>
+      Ambiente generado por las emociones y relaciones personales de los integrantes, puede ser tanto de una organización, como de una empresa. 
+    </p>
+  </header>
+  <article class="grid grid--1x2 feature">
+    <div class="feature__content">
+      <span class="icon-container">
+        <svg class="icon icon--primary">
+          <use xlink:href="images/sprite.svg#easy"></use>
+        </svg>
+      </span>
+      <h3 class="feature__heading">Bases del ambiente laboral </h3>
+      <p>
+        El ambiente laboral, aparte de englobar los sentimientos y relaciones de las personas, incluye el área en el que se trabaja y los factores que motivan a los trabajadores para la ejecución de sus actividades.
+        <br>
+        Se debe poner en prioridad que los trabajadores tengan claras las actividades a realizar, las funciones a ejercer y los procedimientos a ejecutar.
+        <br>
+        Si los trabajadores se encuentran cómodos en el área de trabajo les será más fácil desempeñar sus tareas
+
+      </p>
+      <a href="#" class="link-arrow">Leer más</a>
+    </div>
+    
+      <img class="feature__image" src="images/ambiente1.png" alt="" />
+    
+  </article>
+
+  <article class="grid grid--1x2 feature">
+    <div class="feature__content">
+      <span class="icon-container">
+        <svg class="icon icon--primary">
+          <use xlink:href="images/sprite.svg#computer"></use>
+        </svg>
+      </span>
+      <h3 class="feature__heading">¿Por qué es importante el ambiente laboral? </h3>
+      <p>
+        Para la organización el ambiente laboral es importante ya que ayuda a mantener una buena productividad, desempeño y atraer a más y mejor talento, esto los ayuda a tener una mayor ventaja competitiva.
+          <br>
+          Si se cuida a los empleados estos cuidaran a la empresa y a su vez cuidaran a los clientes.
+          <br>
+          Si se le reconocen los aportes de su trabajo a los trabajadores estos notarán que son tomados en cuenta, lo que les da una mayor unión a la organización y mayor fidelidad a la empresa.
+          <br>
+          “Si la empresa se pone tu camiseta, tu te pones la camiseta de la empresa
+
+      </p>
+      <a href="#" class="link-arrow">Learn More</a>
+    </div>
+    <img class="feature__image" src="images/ambiente2.png" alt="" />
+  </article>
+
+
+  <article class="grid grid--1x2 feature">
+    <div class="feature__content">
+      <span class="icon-container">
+        <svg class="icon icon--primary">
+          <use xlink:href="images/sprite.svg#snap"></use>
+        </svg>
+      </span>
+      <h3 class="feature__heading">Caso de éxito - Oracle </h3>
+      <p>
+       Oracle Corporation es una compañía especializada en el desarrollo de soluciones de nube y locales. Oracle tiene su sede en la localidad californiana de Redwood City, Estados Unidos. Según la clasificación correspondiente al año 2006, ocupa el primer lugar en la categoría de las bases de datos y el séptimo lugar a nivel mundial de las compañías de tecnologías de la información.
+        En Guadalajara, México. Se construyó el campus Oracle MDC, con comedores, gimnasio, entre otras cosas, para mejorar el ambiente laboral.
+      </p>
+      <a href="#" class="link-arrow">Learn More</a>
+    </div>
+    <img class="feature__image" src="images/oracle.jpg" alt="" />
+  </article>
+  <article class="grid grid--1x2 feature">
+    <div class="feature__content">
+      <span class="icon-container">
+        <svg class="icon icon--primary">
+          <use xlink:href="images/sprite.svg#clock"></use>
+        </svg>
+      </span>
+      <h3 class="feature__heading">Infografia</h3>
+      <p>
+        A continuación tienes una infografía para complementar lo visto previamente.
+      </p>
+      <div>
+          <audio src="audio/ambiente.mp3"
+       controls>
+        Your browser does not support the <code>audio</code> element.
+        </audio>
+      </div>
+      
+      <a href="#" class="link-arrow">Learn More</a>
+    </div>
+      <img class="feature__image" src="images/infografia.png" alt="" />
+  </article>
+</section>
 
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

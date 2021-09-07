@@ -6,7 +6,9 @@ collapsibles.forEach((item) =>
 );
 
 
-      function crearGrafica() {
+      function crearGrafica(datos) {
+        
+        
         const graficaResultados = document.getElementById('graficaResultados');
           const data = {
           labels: [
@@ -18,7 +20,7 @@ collapsibles.forEach((item) =>
           ],
           datasets: [{
             label: 'Resultados',
-            data: [40, 50, 40, 60, 40],
+            data: datos,
             fill: true,
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgb(255, 99, 132)',
@@ -44,7 +46,7 @@ collapsibles.forEach((item) =>
             options: options
           };
 
-          var myChart = new Chart(
+          let myChart = new Chart(
                 graficaResultados,
                 config
               );
@@ -53,7 +55,7 @@ collapsibles.forEach((item) =>
 
   const mostrarResultados = document.getElementById('mostrarResultados');
 
-  mostrarResultados.addEventListener("click", crearGrafica);
+
 
 
 //Insertar preguntas
@@ -120,23 +122,23 @@ function mostrarCuestionario() {
 
 	preguntas.forEach((seccionActual, numeroDeSeccion) => {
 	  const preguntas = [];
-
-    
+    let i = 0;
 	  for (pregunta in seccionActual.preguntasSeccion) {
-		preguntas.push(
-		  `
-            <div class="query__question">
-              <p>${seccionActual.preguntasSeccion[pregunta]}</p>
+      i++;
+      preguntas.push(
+        `
+              <div class="query__question">
+                <p>${seccionActual.preguntasSeccion[pregunta]}</p>
+              </div>
+            <div class="query__slider"> 
+              <input class="slider" type="range" min="0" max="100" step="10" class="slider__response" id="seccion${numeroDeSeccion}-respuesta${i}">
+              <div class="slider__labels">
+                <label for="slider__response" >Poco de acuerdo</label>
+                <label for="slider__response" >Muy de acuerdo</label>
+              </div>
             </div>
-          <div class="query__slider"> 
-            <input class="slider" type="range" min="0" max="100" step="10" id="slider__response" name="respuesta${1}">
-            <div class="slider__labels">
-              <label for="slider__response" >Poco de acuerdo</label>
-              <label for="slider__response" >Muy de acuerdo</label>
-            </div>
-          </div>
-      `
-		);
+        `
+      );
 	  }
 
 	  seccionesYpreguntas.push(
@@ -154,3 +156,29 @@ function mostrarCuestionario() {
   }
 
   mostrarCuestionario();
+
+  function obtenerResultadosEncuesta(){
+    const promediosEncuesta = [];
+    let total = 0;
+    let resultadoSlider = 0;
+    
+    preguntas.forEach((seccionActual, numeroDeSeccion) =>{
+      let totalSeccion = 0;
+      let promedioSeccion = 0;
+      let i = 0;
+        for (pregunta in seccionActual.preguntasSeccion) {
+          i++
+          const resultadoSlider = document.getElementById(`seccion${numeroDeSeccion}-respuesta${i}`).value;
+          totalSeccion += parseInt(resultadoSlider);
+        }
+        promedioSeccion = totalSeccion / 5;
+        promediosEncuesta.push(promedioSeccion);
+        
+    });
+    
+    crearGrafica(promediosEncuesta)
+    
+  }
+
+
+  mostrarResultados.addEventListener("click", obtenerResultadosEncuesta);
